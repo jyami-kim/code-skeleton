@@ -8,6 +8,6 @@ import org.springframework.stereotype.Service
 class PostService(val postRepository: PostRepository) {
 
     fun getAllPost(): List<Post> {
-        return postRepository.getAll()
+        return postRepository.findAll().toList()
     }
 }
